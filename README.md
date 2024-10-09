@@ -1,16 +1,37 @@
-# coffee_shop
 
-A new Flutter project.
+# Coffee Shop App
 
-## Getting Started
+## Table of Contents
+- [Overview](#overview)
+- [Screenshots](#screenshots)
+- [Installation](#installation)
+- [Usage](#usage)
 
-This project is a starting point for a Flutter application.
+## Overview
+The Coffee Shop App is a Flutter-based application that allows users to order and have their coffees delivered to them at their location.
 
-A few resources to get you started if this is your first Flutter project:
+## Screenshots
+![Screenshot 1](assets/screenshots/onboarding.png)  
+*This is the UI of the Onboarding Screen*
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![Screenshot 2](assets/screenshots/home.png)  
+*This is the UI of the Home Screen*
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot 3](assets/screenshots/detail.png)  
+*This is the UI of the Coffee Shop Details Screen*
+
+## Installation
+To run this project, clone the repository and follow the instructions below:
+
+```bash
+git clone https://github.com/Prodigy-Genes/cofeeShop.git
+cd cofeeShop
+flutter pub get
+```
+
+
+### Running the App
+
+```bash
+flutter run
+```
