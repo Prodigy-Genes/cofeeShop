@@ -1,3 +1,4 @@
+import 'package:coffee_shop/navigation/orders.dart';
 import 'package:coffee_shop/widgets/order_system.dart';
 import 'package:flutter/material.dart';
 
@@ -15,9 +16,10 @@ class _OrderState extends State<Order> {
     return Scaffold(
       backgroundColor: Colors.white.withOpacity(0.97),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          const SizedBox(height: 50,),
+          const SizedBox(
+            height: 50,
+          ),
           Container(
             padding: const EdgeInsets.all(32),
             child: Row(
@@ -33,24 +35,35 @@ class _OrderState extends State<Order> {
                     height: 24,
                   ),
                 ),
-                const SizedBox(width: 140,),
-                  const Text(
-                    'Order',
-                    style: TextStyle(
-                      fontSize: 22,
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: 'Sora',
-                    ),
-                    textAlign: TextAlign.center,
+                const SizedBox(
+                  width: 140,
+                ),
+                const Text(
+                  'Order',
+                  style: TextStyle(
+                    fontSize: 22,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Sora',
                   ),
+                  textAlign: TextAlign.center,
+                ),
               ],
             ),
           ),
-          const SizedBox(height: 20,),
-          const OrderSystem()
+          const SizedBox(
+            height: 20,
+          ),
+          Expanded(
+            child: SingleChildScrollView(
+              child: OrderSystem(
+                price: widget.price,
+              ),
+            ),
+          ),
         ],
       ),
+      bottomNavigationBar: const Orders(), 
     );
   }
 }

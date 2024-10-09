@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:coffee_shop/widgets/deliver_selected.dart';
 
 class OrderSystem extends StatefulWidget {
-  const OrderSystem({super.key});
+  final String price;
+  const OrderSystem({super.key, required this.price});
 
   @override
   State<OrderSystem> createState() => _OrderSystemState();
@@ -10,7 +11,7 @@ class OrderSystem extends StatefulWidget {
 
 class _OrderSystemState extends State<OrderSystem> {
   bool isDeliverSelected = true; // Initially "Deliver" is selected
-  bool isPickupSelected = false;  // "Pick up" is not selected initially
+  bool isPickupSelected = false; // "Pick up" is not selected initially
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +51,8 @@ class _OrderSystemState extends State<OrderSystem> {
                     style: TextStyle(
                       fontFamily: 'Sora',
                       fontSize: 20,
-                      fontWeight: isDeliverSelected ? FontWeight.bold : FontWeight.w400,
+                      fontWeight:
+                          isDeliverSelected ? FontWeight.bold : FontWeight.w400,
                       color: isDeliverSelected ? Colors.white : Colors.black,
                     ),
                     textAlign: TextAlign.center,
@@ -80,7 +82,8 @@ class _OrderSystemState extends State<OrderSystem> {
                     style: TextStyle(
                       fontFamily: 'Sora',
                       fontSize: 20,
-                      fontWeight: isPickupSelected ? FontWeight.bold : FontWeight.w400,
+                      fontWeight:
+                          isPickupSelected ? FontWeight.bold : FontWeight.w400,
                       color: isPickupSelected ? Colors.white : Colors.black,
                     ),
                     textAlign: TextAlign.center,
@@ -92,7 +95,10 @@ class _OrderSystemState extends State<OrderSystem> {
         ),
         const SizedBox(height: 20),
         // Conditionally render DeliverSelected
-        if (isDeliverSelected) const DeliverSelected(),
+        if (isDeliverSelected)
+          DeliverSelected(
+            price: widget.price,
+          ),
       ],
     );
   }
