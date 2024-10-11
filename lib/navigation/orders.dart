@@ -1,3 +1,4 @@
+import 'package:coffee_shop/screens/maps/map.dart';
 import 'package:coffee_shop/widgets/button.dart';
 import 'package:flutter/material.dart';
 
@@ -68,13 +69,19 @@ class Orders extends StatelessWidget {
                           fontFamily: 'Sora',
                           fontWeight: FontWeight.w400,
                           color: Color.fromARGB(255, 73, 73, 73)),
-                          textAlign: TextAlign.center,
+                      textAlign: TextAlign.center,
                     )
                   ],
                 ),
               ),
-              const SizedBox(width: 190,),
-              Image.asset('assets/icons/more.png',width: 24,height: 24,)
+              const SizedBox(
+                width: 190,
+              ),
+              Image.asset(
+                'assets/icons/more.png',
+                width: 24,
+                height: 24,
+              )
             ],
           ),
           const SizedBox(
@@ -86,7 +93,10 @@ class Orders extends StatelessWidget {
             height: 62,
             child: Button(
               text: 'Order',
-              onpressed: () {},
+              onpressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const DeliveryMap()));
+              },
             ),
           ),
         ],

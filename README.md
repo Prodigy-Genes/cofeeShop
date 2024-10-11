@@ -23,6 +23,12 @@ The Coffee Shop App is a Flutter-based application that allows users to order an
 ![Screenshot 4](assets/screenshots/order.png)  
 *This is the UI of the Coffee Shop Order Screen*
 
+![Screenshot 5](assets/screenshots/map.png)  
+*This is the UI of the Coffee Map for Delivery Screen*
+
+
+
+
 
 ## Installation
 To run this project, clone the repository and follow the instructions below:

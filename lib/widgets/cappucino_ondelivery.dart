@@ -14,7 +14,8 @@ class CappucinoOndelivery extends StatelessWidget {
           Container(
             width: 54,
             height: 54,
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(24)),
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(24)
+            ),
             child: Image.asset(
               'assets/images/cappucino.png',
               width: 54,
